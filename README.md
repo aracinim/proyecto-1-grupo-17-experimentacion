@@ -73,7 +73,7 @@ Se evaluarán los puntos de sensibilidad de la arquitectura bajo escenarios cont
 * **Capa de caché (Exp.1):** Redis (Google Cloud Memorystore).
 * **Mensajería (Exp.2):** Pub/Sub (tópico + suscripción).
 * **Persistencia:** PostgreSQL (Cloud SQL).
-* **Herramientas de carga:** k6, Locust o JMeter.
+* **Herramientas de carga:** JMeter.
 * **Observabilidad:** Cloud Monitoring y Logging.
 
 ---
