@@ -81,7 +81,7 @@ Se evaluarán los puntos de sensibilidad de la arquitectura bajo escenarios cont
 ## Diagrama de arquitectura a alto nivel
 
 ```
-[ Cliente simulado k6/Locust ]
+[ Cliente simulado Jmeter ]
           | (HTTP, latencia 3G/4G simulada)
           v
   ┌──────────────────────┐         ┌──────────────────────┐
@@ -89,11 +89,11 @@ Se evaluarán los puntos de sensibilidad de la arquitectura bajo escenarios cont
   │ API de Inventario    │         │ API de Pedido        │
   │ (FastAPI)            │         │ (FastAPI)            │
   └─────────┬────────────┘         └─────────┬────────────┘
-            │ Redis hit/miss                   │ Publish 202
-            v                                  v
+            │ Redis hit/miss                 │ Publish 202
+            v                                v
      ┌──────────────┐                   ┌─────────────┐
-     │ Memorystore  │                   │  Pub/Sub     │
-     │ (Redis)      │                   │  (topic)     │
+     │ Memorystore  │                   │  Pub/Sub    │
+     │ (Redis)      │                   │  (topic)    │
      └──────┬───────┘                   └──────┬──────┘
             │ Warm-up/backup                   │
             v                                  v
@@ -103,10 +103,16 @@ Se evaluarán los puntos de sensibilidad de la arquitectura bajo escenarios cont
       └──────┬────────┘                 │ (suscriptor)         │
              │                          └─────────┬────────────┘
              │                                    │
-             v                                    v
+             │                                    v
+             │                               ┌───────────────┐
+             │                               │ Cloud SQL     │                 
+             │                               │ PostgreSQL    │                 
+             │                               └──────┬────────┘                 
+             │                                      │                         
+             │                                      │
+             v                                      v
         Observabilidad (Cloud Logging/Monitoring, métricas, trazas)
 ```
-
 ---
 
 ## Interpretación de resultados
