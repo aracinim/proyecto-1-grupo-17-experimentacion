@@ -1,0 +1,179 @@
+{
+	"info": {
+		"_postman_id": "d9858b64-d26a-428e-829c-b4c41414c71f",
+		"name": "Proyecto-1-Experimentacion",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "43584184",
+		"_collection_link": "https://www.postman.com/gold-crescent-883157/workspace/command-line-heroes/collection/43584184-d9858b64-d26a-428e-829c-b4c41414c71f?action=share&source=collection_link&creator=43584184"
+	},
+	"item": [
+		{
+			"name": "pedidos",
+			"item": [
+				{
+					"name": "health",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{TOKEN}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{PEDIDOS_API_URL}}/health",
+							"host": [
+								"{{PEDIDOS_API_URL}}"
+							],
+							"path": [
+								"health"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "pedido",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{TOKEN}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"order_id\": \"ORD-1001\",\n    \"sku\": \"MED-ANALG-ACETAM-500MG-24TAB\",\n    \"qty\": 2,\n    \"customer_id\": \"CUST-9\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{PEDIDOS_API_URL}}/pedido",
+							"host": [
+								"{{PEDIDOS_API_URL}}"
+							],
+							"path": [
+								"pedido"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "inventario",
+			"item": [
+				{
+					"name": "health",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{TOKEN}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{INVENTARIO_API_URL}}/health",
+							"host": [
+								"{{INVENTARIO_API_URL}}"
+							],
+							"path": [
+								"health"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "disponibilidad",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{TOKEN}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{INVENTARIO_API_URL}}/inventario/SKU-001/disponibilidad",
+							"host": [
+								"{{INVENTARIO_API_URL}}"
+							],
+							"path": [
+								"inventario",
+								"SKU-001",
+								"disponibilidad"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "PEDIDOS_API_URL",
+			"value": "",
+			"type": "string"
+		},
+		{
+			"key": "INVENTARIO_API_URL",
+			"value": "",
+			"type": "string"
+		},
+		{
+			"key": "TOKEN",
+			"value": "",
+			"type": "string"
+		}
+	]
+}
