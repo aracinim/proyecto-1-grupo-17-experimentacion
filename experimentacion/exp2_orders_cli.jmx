@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <jmeterTestPlan version="1.2" properties="5.0" jmeter="5.6.3">
   <hashTree>
-    <TestPlan guiclass="TestPlanGui" testclass="TestPlan" testname="Exp2 - Pedidos (400/min por 60m)">
-      <stringProp name="TestPlan.comments">Objetivo: 400 pedidos/min por 60m; 5xx=0; DLQ=0; autoescalado &lt; 2m.</stringProp>
-      <elementProp name="TestPlan.user_defined_variables" elementType="Arguments" guiclass="ArgumentsPanel" testclass="Arguments" testname="User Defined Variables">
+    <TestPlan guiclass="TestPlanGui" testclass="TestPlan" testname="Exp2 - Pedidos (400/min por 15m)" enabled="true">
+      <stringProp name="TestPlan.comments">Objetivo: 400 pedidos/min por 15m; 5xx=0; DLQ=0; autoescalado &lt; 2m.</stringProp>
+      <boolProp name="TestPlan.functional_mode">false</boolProp>
+      <boolProp name="TestPlan.serialize_threadgroups">false</boolProp>
+      <elementProp name="TestPlan.user_defined_variables" elementType="Arguments" guiclass="ArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
         <collectionProp name="Arguments.arguments">
           <elementProp name="PROTOCOL" elementType="Argument">
             <stringProp name="Argument.name">PROTOCOL</stringProp>
@@ -17,7 +19,7 @@
           </elementProp>
           <elementProp name="ID_TOKEN" elementType="Argument">
             <stringProp name="Argument.name">ID_TOKEN</stringProp>
-            <stringProp name="Argument.value">${__P(ID_TOKEN,eyJhbGciOiJSUzI1NiIsImtpZCI6IjA3ZjA3OGYyNjQ3ZThjZDAxOWM0MGRhOTU2OWU0ZjUyNDc5OTEwOTQiLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJodHRwczovL2FjY291bnRzLmdvb2dsZS5jb20iLCJhenAiOiIzMjU1NTk0MDU1OS5hcHBzLmdvb2dsZXVzZXJjb250ZW50LmNvbSIsImF1ZCI6IjMyNTU1OTQwNTU5LmFwcHMuZ29vZ2xldXNlcmNvbnRlbnQuY29tIiwic3ViIjoiMTA3NTczMDc4MzU2MTUwNzY2ODQ0IiwiZW1haWwiOiJhbmdlbHJpY2FyZG9yYWNpbmltZXphQGdtYWlsLmNvbSIsImVtYWlsX3ZlcmlmaWVkIjp0cnVlLCJhdF9oYXNoIjoic3VvSnhLTHJ5NnNBOTZGMXFUSXpDUSIsImlhdCI6MTc1NzgwMDQ5MSwiZXhwIjoxNzU3ODA0MDkxfQ.HENsotWdrW6SJH9vAceMmOpE_FFjLAgBr6FV36vSRzS2ymscE_uiIzWLP4gmTk2DOcyqr_N6U4s0XC-FcxGP8nNcNhu1GursqH8DgcOjAYycux498NMrdTf5OHI7piwInIdrwqVX0cnTZebJWVMJMdut3uSRhizwIy8wOLPNNU3TfvMGQP-vA1Anf6ZMFW4gf2vkkfjTn2h9JbAQ18sv7JirtfSOYI3R25ZJPutZH6z_xD1LJojwxOoIdtBOJbQcXNj6n8O548-pLoTt8GYn4MG7lBxB0eInD1A_22CAuyN4y-WsbWhzWtiKGcbZ71iIWTbRmuemo8kElJI4Q0U9rA)}</stringProp>
+            <stringProp name="Argument.value">${__P(ID_TOKEN,eyJhbGciOiJSUzI1NiIsImtpZCI6IjA3ZjA3OGYyNjQ3ZThjZDAxOWM0MGRhOTU2OWU0ZjUyNDc5OTEwOTQiLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJodHRwczovL2FjY291bnRzLmdvb2dsZS5jb20iLCJhenAiOiIzMjU1NTk0MDU1OS5hcHBzLmdvb2dsZXVzZXJjb250ZW50LmNvbSIsImF1ZCI6IjMyNTU1OTQwNTU5LmFwcHMuZ29vZ2xldXNlcmNvbnRlbnQuY29tIiwic3ViIjoiMTA3NTczMDc4MzU2MTUwNzY2ODQ0IiwiZW1haWwiOiJhbmdlbHJpY2FyZG9yYWNpbmltZXphQGdtYWlsLmNvbSIsImVtYWlsX3ZlcmlmaWVkIjp0cnVlLCJhdF9oYXNoIjoiTENlSUdJcU1HQm53c0hzRE5hbHUxdyIsImlhdCI6MTc1NzgwMTgxOCwiZXhwIjoxNzU3ODA1NDE4fQ.iLoLE6m4vo2DbFe6pJq3iNBzh5UDyGmEgmgPgdRCvar4iFygyiJ2aLt7YXFoWT1Xx1RfCNsB2eyNbNdoLjyPB0BJqtHkBWf9tXEMhxnmuBENkV-H8LjiOIZu4Jbrj1SS01sRnitWRpdKd2BaCQnxBH3uGUlYY5BrsnbeZnQBJZ6eKfasNlKCCuc0V91_U_tDLEpHcApBn4esDVAf8Bw8cRAti1vIPydKl3BLGItXw94t7kqnZIL1djoaeY8iESZXTUzprFLijb8vMPd36hQ7Lsn3DhhMcKCLA4t5awXm_GIF3d9HMwa2IJ9q-nl9S02yzxW_wcrOz6IsPPaixTO10w)}</stringProp>
             <stringProp name="Argument.metadata">=</stringProp>
           </elementProp>
           <elementProp name="SKU_CSV_PATH" elementType="Argument">
@@ -27,17 +29,24 @@
           </elementProp>
         </collectionProp>
       </elementProp>
+      <stringProp name="TestPlan.user_define_classpath"></stringProp>
     </TestPlan>
     <hashTree>
-      <ConfigTestElement guiclass="HttpDefaultsGui" testclass="ConfigTestElement" testname="HTTP Request Defaults">
-        <stringProp name="HTTPSampler.domain">${HOST_ORDER}</stringProp>
-        <stringProp name="HTTPSampler.protocol">${PROTOCOL}</stringProp>
-        <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables">
+
+      <ConfigTestElement guiclass="HttpDefaultsGui" testclass="ConfigTestElement" testname="HTTP Request Defaults" enabled="true">
+        <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
           <collectionProp name="Arguments.arguments"/>
         </elementProp>
-        <stringProp name="HTTPSampler.implementation"></stringProp>
+        <stringProp name="HTTPSampler.domain">${HOST_ORDER}</stringProp>
+        <stringProp name="HTTPSampler.port"></stringProp>
+        <stringProp name="HTTPSampler.protocol">${PROTOCOL}</stringProp>
+        <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+        <stringProp name="HTTPSampler.path"></stringProp>
+        <stringProp name="HTTPSampler.concurrentPool">6</stringProp>
+        <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
       </ConfigTestElement>
       <hashTree/>
+
       <CSVDataSet guiclass="TestBeanGUI" testclass="CSVDataSet" testname="CSV SKUs" enabled="true">
         <stringProp name="delimiter">,</stringProp>
         <stringProp name="fileEncoding"></stringProp>
@@ -50,6 +59,7 @@
         <stringProp name="variableNames">sku</stringProp>
       </CSVDataSet>
       <hashTree/>
+
       <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header Manager" enabled="true">
         <collectionProp name="HeaderManager.headers">
           <elementProp name="Content-Type" elementType="Header">
@@ -63,18 +73,18 @@
         </collectionProp>
       </HeaderManager>
       <hashTree/>
-      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="Pedidos 400/min por 60m" enabled="true">
-        <intProp name="ThreadGroup.num_threads">50</intProp>
-        <intProp name="ThreadGroup.ramp_time">30</intProp>
-        <longProp name="ThreadGroup.duration">900</longProp>
-        <longProp name="ThreadGroup.delay">0</longProp>
-        <boolProp name="ThreadGroup.same_user_on_next_iteration">true</boolProp>
-        <boolProp name="ThreadGroup.scheduler">true</boolProp>
+
+      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="Pedidos 400/min por 15m" enabled="true">
         <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
-        <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="Loop Controller">
-          <intProp name="LoopController.loops">-1</intProp>
-          <boolProp name="LoopController.continue_forever">false</boolProp>
+        <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="Loop Controller" enabled="true">
+          <boolProp name="LoopController.continue_forever">true</boolProp>
+          <stringProp name="LoopController.loops">-1</stringProp>
         </elementProp>
+        <stringProp name="ThreadGroup.num_threads">50</stringProp>
+        <stringProp name="ThreadGroup.ramp_time">30</stringProp>
+        <boolProp name="ThreadGroup.scheduler">true</boolProp>
+        <stringProp name="ThreadGroup.duration">900</stringProp>
+        <stringProp name="ThreadGroup.delay">0</stringProp>
       </ThreadGroup>
       <hashTree>
         <ConstantThroughputTimer guiclass="TestBeanGUI" testclass="ConstantThroughputTimer" testname="Constant Throughput 400/min" enabled="true">
@@ -86,24 +96,18 @@
           </doubleProp>
         </ConstantThroughputTimer>
         <hashTree/>
+
         <JSR223PreProcessor guiclass="TestBeanGUI" testclass="JSR223PreProcessor" testname="Generate order_id/qty/customer_id" enabled="true">
           <stringProp name="scriptLanguage">groovy</stringProp>
           <stringProp name="script">def rnd = new java.util.Random()
-vars.put(&apos;order_id&apos;, &apos;ORD-&apos; + java.util.UUID.randomUUID().toString())
-vars.put(&apos;qty&apos;, String.valueOf(1 + rnd.nextInt(3)))
-vars.put(&apos;customer_id&apos;, &apos;CUST-&apos; + (1000 + rnd.nextInt(900000)))</stringProp>
-          <stringProp name="parameters"></stringProp>
-          <stringProp name="filename"></stringProp>
-          <stringProp name="cacheKey">false</stringProp>
+vars.put('order_id', 'ORD-' + java.util.UUID.randomUUID().toString())
+vars.put('qty', String.valueOf(1 + rnd.nextInt(3)))
+vars.put('customer_id', 'CUST-' + (1000 + rnd.nextInt(900000)))</stringProp>
         </JSR223PreProcessor>
         <hashTree/>
+
         <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="POST /pedido" enabled="true">
-          <stringProp name="HTTPSampler.path">/pedido</stringProp>
-          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
-          <stringProp name="HTTPSampler.method">POST</stringProp>
-          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
-          <boolProp name="HTTPSampler.postBodyRaw">false</boolProp>
-          <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables">
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
             <collectionProp name="Arguments.arguments">
               <elementProp name="" elementType="HTTPArgument">
                 <boolProp name="HTTPArgument.always_encode">false</boolProp>
@@ -114,20 +118,44 @@ vars.put(&apos;customer_id&apos;, &apos;CUST-&apos; + (1000 + rnd.nextInt(900000
               </elementProp>
             </collectionProp>
           </elementProp>
+          <stringProp name="HTTPSampler.path">/pedido</stringProp>
+          <stringProp name="HTTPSampler.method">POST</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
         </HTTPSamplerProxy>
         <hashTree>
           <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="Assert 200 or 202" enabled="true">
             <collectionProp name="Asserion.test_strings">
-              <stringProp name="-1456765395">20(0|2)</stringProp>
+              <stringProp name="49586">20(0|2)</stringProp>
             </collectionProp>
             <stringProp name="Assertion.test_field">Assertion.response_code</stringProp>
-            <intProp name="Assertion.test_type">16</intProp>
-            <stringProp name="Assertion.custom_message"></stringProp>
-            <boolProp name="Assertion.assume_success">false</boolProp>
+            <intProp name="Assertion.test_type">2</intProp>
           </ResponseAssertion>
           <hashTree/>
         </hashTree>
       </hashTree>
+
+      <ResultCollector guiclass="SummaryReport" testclass="ResultCollector" testname="Summary Report (GUI - desactívalo en carga real)" enabled="false">
+        <boolProp name="ResultCollector.error_logging">false</boolProp>
+        <objProp>
+          <name>saveConfig</name>
+          <value class="SampleSaveConfiguration">
+            <time>true</time><latency>true</latency><timestamp>true</timestamp><success>true</success>
+            <label>true</label><code>true</code><message>false</message><threadName>false</threadName>
+            <dataType>false</dataType><encoding>false</encoding><assertions>false</assertions><subresults>false</subresults>
+            <responseData>false</responseData><samplerData>false</samplerData><xml>false</xml><fieldNames>true</fieldNames>
+            <responseHeaders>false</responseHeaders><requestHeaders>false</requestHeaders><responseDataOnError>false</responseDataOnError>
+            <saveAssertionResultsFailureMessage>false</saveAssertionResultsFailureMessage><assertionsResultsToSave>0</assertionsResultsToSave>
+            <bytes>true</bytes><sentBytes>true</sentBytes><url>false</url><threadCounts>true</threadCounts>
+            <idleTime>true</idleTime><connectTime>true</connectTime>
+          </value>
+        </objProp>
+        <stringProp name="filename"></stringProp>
+      </ResultCollector>
+      <hashTree/>
+
     </hashTree>
   </hashTree>
 </jmeterTestPlan>

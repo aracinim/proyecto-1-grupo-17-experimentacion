@@ -10,7 +10,7 @@ jmeter -n -t exp1_inventory_cli.jmx \
   -e -o results/exp1-report \
   -q report.properties
 
-# Exp2: Pedidos (400/min por 60m)
+# Exp2: Pedidos (400/min por 15m)
 jmeter -n -t exp2_orders_cli.jmx \
   -JHOST_ORDER="pedido-api-435513124363.us-central1.run.app" \
   -JID_TOKEN="$ID_TOKEN" \
