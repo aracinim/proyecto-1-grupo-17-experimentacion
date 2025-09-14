@@ -17,7 +17,7 @@
           </elementProp>
           <elementProp name="ID_TOKEN" elementType="Argument">
             <stringProp name="Argument.name">ID_TOKEN</stringProp>
-            <stringProp name="Argument.value">${__P(ID_TOKEN,eyJhbGciOiJSUzI1NiIsImtpZCI6IjA3ZjA3OGYyNjQ3ZThjZDAxOWM0MGRhOTU2OWU0ZjUyNDc5OTEwOTQiLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJodHRwczovL2FjY291bnRzLmdvb2dsZS5jb20iLCJhenAiOiIzMjU1NTk0MDU1OS5hcHBzLmdvb2dsZXVzZXJjb250ZW50LmNvbSIsImF1ZCI6IjMyNTU1OTQwNTU5LmFwcHMuZ29vZ2xldXNlcmNvbnRlbnQuY29tIiwic3ViIjoiMTA3NTczMDc4MzU2MTUwNzY2ODQ0IiwiZW1haWwiOiJhbmdlbHJpY2FyZG9yYWNpbmltZXphQGdtYWlsLmNvbSIsImVtYWlsX3ZlcmlmaWVkIjp0cnVlLCJhdF9oYXNoIjoieE03YUZoNWs0Vm92UlFsT0ZvYjE5USIsImlhdCI6MTc1Nzc5NzM5OSwiZXhwIjoxNzU3ODAwOTk5fQ.YAzQlzn8mqDqheCTCNBUqDHyTx5ENEWKJlDyXUoHxkMoIHvPrkdQoARJsQ_ZI2zKq4mOn4Sje379-wyCdh2q-oRA9WMRqJw-QAoBxrPjzSHKXb3-5fBhuAC1ln32ag8br3FEm9GuCNo8mEHWPj35OZz2FuYdjDepTyeaRx7Ww89sPvtZfc8jhRcjLDo_e2bO-3CV39nOXQotEctkfaDgSklg5XoMXs1dmPRwslwnB3vebQH8X6u0mk0FSHvU3sTpcbc0n36Ps6u6DT4Yydbpx_vYvC5fdxx7EP92Ht6kw65eHnsw98gOrdqERm4ESIjGMCshEUkFnweUrn8nHMraSw)}</stringProp>
+            <stringProp name="Argument.value">${__P(ID_TOKEN,)}</stringProp>
             <stringProp name="Argument.metadata">=</stringProp>
           </elementProp>
           <elementProp name="SKU_CSV_PATH" elementType="Argument">
@@ -27,8 +27,6 @@
           </elementProp>
         </collectionProp>
       </elementProp>
-      <boolProp name="TestPlan.functional_mode">false</boolProp>
-      <boolProp name="TestPlan.serialize_threadgroups">false</boolProp>
     </TestPlan>
     <hashTree>
       <ConfigTestElement guiclass="HttpDefaultsGui" testclass="ConfigTestElement" testname="HTTP Request Defaults">
@@ -122,7 +120,7 @@
           <hashTree/>
         </hashTree>
       </hashTree>
-      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="Test 15m (100 VUs)" enabled="true">
+      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="Test 15m (100 VUs)">
         <intProp name="ThreadGroup.num_threads">100</intProp>
         <intProp name="ThreadGroup.ramp_time">30</intProp>
         <longProp name="ThreadGroup.duration">900</longProp>
@@ -141,7 +139,7 @@
           <stringProp name="RandomTimer.range">100</stringProp>
         </UniformRandomTimer>
         <hashTree/>
-        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="GET /inventario/${sku}/disponibilidad">
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="GET /inventario/${sku}/disponibilidad" enabled="true">
           <stringProp name="HTTPSampler.path">/inventario/${sku}/disponibilidad</stringProp>
           <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
           <stringProp name="HTTPSampler.method">GET</stringProp>

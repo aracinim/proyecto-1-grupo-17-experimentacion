@@ -167,6 +167,7 @@ resource "google_pubsub_topic" "orders" {
 resource "google_cloud_run_v2_service" "inventory_api" {
   name     = "inventario-api"
   location = var.region
+  deletion_protection = false
   template {
     service_account = google_service_account.sa_inventory.email
 
@@ -238,6 +239,7 @@ resource "google_cloud_run_v2_service" "inventory_api" {
 resource "google_cloud_run_v2_service" "order_api" {
   name     = "pedido-api"
   location = var.region
+  deletion_protection = false
   template {
     service_account = google_service_account.sa_order.email
 
